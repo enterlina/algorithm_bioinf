@@ -1,7 +1,7 @@
 import numpy as np
 
-Genome_1 = "AGC-"
-Genome_2 = "GCAA---  "
+Genome_1 = "GGACT"
+Genome_2 = "TAGAC"
 match = 1
 penalty = -1
 gapcost = -0.499
@@ -14,10 +14,11 @@ max_length = max ( len ( Genome_1 ) , len ( Genome_2 ) )
 
 M = [ [ 0 for x in range ( max_length + 1 ) ] for y in range ( max_length + 1 ) ]
 
+
 while len ( Genome_1 ) < max_length:
-    Genome_1 +='-'
+    Genome_1 += gap
 while len ( Genome_2 ) < max_length:
-    Genome_2 +='-'
+    Genome_2 += gap
 
 print ( 'Original sequence:' )
 print ( Genome_2 )
@@ -83,11 +84,6 @@ while (m > 0) & (k > 0):
         if (Aligned_G1[ i ] == gap) and (Aligned_G2[ i ] == gap):
             del Aligned_G1[ i ]
             del Aligned_G2[ i ]
-        elif (Aligned_G1[ i ] == " ") and (Aligned_G2[ i ] == gap):
-            del Aligned_G1[ i ]
-            del Aligned_G2[ i ]
-        elif (Aligned_G1[ i ] == gap) and (Aligned_G2[ i ] == " "):
-            del Aligned_G1[ i ]
-            del Aligned_G2[ i ]
+
 print ( 'Aligned Genome1' , list ( reversed ( Aligned_G1 ) ) )
 print ( 'Aligned Genome2' , list ( reversed ( Aligned_G2 ) ) )
