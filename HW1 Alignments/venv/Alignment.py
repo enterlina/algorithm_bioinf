@@ -1,7 +1,7 @@
 import numpy as np
 
-Genome_1 = "AGC-"
-Genome_2 = "GCAA---  "
+Genome_1 = "GGACT"
+Genome_2 = "TAGAC"
 match = 1
 penalty = -1
 gapcost = -0.499
