@@ -1,26 +1,26 @@
 import numpy as np
 
-Genome_1 = "ATGAC-"
-Genome_2 = "T-ATGA"
+Genome_1 = "ATGAC"
+Genome_2 = "TCTGA"
 len_Genome1 = len ( Genome_1 )
 len_Genome2 = len ( Genome_2 )
 
 Ref_M = [
-    [ 0, -1 , -1 , -1 , -1 ] ,
-    [ -1 , 1 , -1 , -1 , 1] ,
-    [ -1 , -1 , 1 , -1 , -1 ] ,
+    [ 1 , -1 , -1 , -1 , -1 ] ,
+    [ -1 , 1 , -1 , -1 , -1 ] ,
+    [ -1 , -1 , 30 , -1 , -1 ] ,
     [ -1 , -1 , -1 , 1 , -1 ] ,
-    [ -1 , -1 , -1 , -1 ,0] ,
+    [ -1 , -1 , -1 , -1 , 0 ] ,
 ]
 
 gap = '-'
 Aligned_G1 = list ( )
 Aligned_G2 = list ( )
 
-
 Reference = {'A': 0 , 'G': 1 , 'C': 2 , 'T': 3 , '-': 4}
 
 # print ( 'Original sequence:' )
+
 print ( "Genome 1:" , Genome_1 )
 print ( "Genome 2:" , Genome_2 )
 # print ( Reference )
@@ -96,16 +96,16 @@ while (m >= 0) & (k >= 0):
             Aligned_G1.append ( Genome_1[ k ] )
             Aligned_G2.append ( gap )
             k -= 1
-    for i in range ( 0 , len ( Aligned_G1 ) - 1 ):
-        if (Aligned_G1[ i ] == gap) and (Aligned_G2[ i ] == gap):
-            del Aligned_G1[ i ]
-            del Aligned_G2[ i ]
-        elif (Aligned_G1[ i ] == " ") and (Aligned_G2[ i ] == gap):
-            del Aligned_G1[ i ]
-            del Aligned_G2[ i ]
-        elif (Aligned_G1[ i ] == gap) and (Aligned_G2[ i ] == " "):
-            del Aligned_G1[ i ]
-            del Aligned_G2[ i ]
+    # for i in range ( 0 , len ( Aligned_G1 ) - 1 ):
+    #     if (Aligned_G1[ i ] == gap) and (Aligned_G2[ i ] == gap):
+    #         del Aligned_G1[ i ]
+    #         del Aligned_G2[ i ]
+    #     elif (Aligned_G1[ i ] == " ") and (Aligned_G2[ i ] == gap):
+    #         del Aligned_G1[ i ]
+    #         del Aligned_G2[ i ]
+    #     elif (Aligned_G1[ i ] == gap) and (Aligned_G2[ i ] == " "):
+    #         del Aligned_G1[ i ]
+    #         del Aligned_G2[ i ]
 
 print ( 'Aligned Genome1' , list ( reversed ( Aligned_G1 ) ) )
 print ( 'Aligned Genome2' , list ( reversed ( Aligned_G2 ) ) )
