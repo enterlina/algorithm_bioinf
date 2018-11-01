@@ -1,13 +1,14 @@
 import numpy as np
 
-# Genome_1 = "AAACAUGAGGAUUACCCAUGU"
-# Genome_2 = "AAACAUGAGGAUUACCCAUGU"
+Genome_1 = "AAACAUGAGGAUUACCCAUGU"
+Genome_2 = "AAACAUGAGGAUUACCCAUGU"
 
-Genome_1 = "GCACGACG"
-Genome_2 = "GCACGACG"
+# Genome_1 = "GCACGACG"
+# Genome_2 = "GCACGACG"
 
 # Genome_1 = "GGACC"
 # Genome_2 = "GGACC"
+
 
 complement = {'A': 'U' , 'U': 'A' , 'C': 'G' , 'G': 'C'}
 
@@ -36,49 +37,48 @@ def max_row_column(index1 , index2 , M):
 for i in range ( 0 , max_length + 1 ):
     M[ i ][ i ] = 0
 
-for i in range ( 0 , max_length + 1 ):
-    for j in range ( i + 1 , max_length + 1 ):
-        diag = 0
+for k in range ( 1 , len ( M ) +1 , 1 ):
+    for i in range ( 0 , len ( M )+1 , 1 ):
+        if (i + k) < len ( M ):
+            j = i + k
+            diag=0
+            if complementary ( Genome_1[ i ] , Genome_2[ j -1 ] ) == 'true':
+                diag = M[ i + 1 ][ j - 1 ] + 1
+            max_k = max_row_column ( i , j , M )
 
-        if complementary ( Genome_1[ i - 1 ] , Genome_2[ j - 1 ] ) == 'true':
-            diag = M[ i + 1 ][ j - 1 ] + 1
+            top = M[ i + 1 ][ j ]
 
-        max_k = max_row_column ( i , j , M )
+            left = M[ i ][ j - 1 ]
 
-        top = M[ i + 1 ][ j ]
+            M[ i ][ j ] = max ( top , left , diag , max_k )
 
-        left = M[ i ][ j - 1 ]
-
-        M[ i ][ j ] = max ( top , left , diag , max_k )
-
-        print ( "ij" , i , j , "Mij" , M[ i ][ j ] , "M[i+1][j]" , M[ i + 1 ][ j ] , i + 1 , j , "top" , top , "left" ,
-                left ,
-                "diag" , diag , "M[ i + 1 ][ j - 1 ]" , M[ i + 1 ][ j - 1 ] , "Gen_1" ,
-                Genome_1[ i - 1 ] , "i-1" , i - 1 , "Gen_2" , Genome_2[ j - 1 ] , "j-1" , j - 1 , "max_pok" ,
-                max_row_column ( i , j , M ) )
+            print ( "ij" , i , j , "   Mij" , M[ i ][ j ] , "   top" , top ,
+                    "   left" ,left , "   diag" , diag , "   Mi + 1/ j - 1  " , M[ i + 1 ][ j - 1 ] , "   Gen_1" ,
+                    Genome_1[ i - 1 ] , "i-1" , i - 1 , "   Gen_2" , Genome_2[ j - 1 ] , "j-1" , j - 1 , "    max_pok" ,
+                    max_row_column ( i , j , M ) )
 
 print ( '\nMatrix M \n' , np.matrix ( M ) )
 
-# def traceback(M , i , j , pairs):
-#     if j <= i:
-#         return
-#     if M[ i ][ j ] == M[ i + 1 ][ j ]:
-#         traceback ( M , i + 1 , j , pairs )
-#     elif M[ i ][ j ] == M[ i ][ j - 1 ]:
-#         traceback ( M , i , j - 1 , pairs )
-#     elif complementary ( Genome_1[ i ] , Genome_2[ j ] ) and (M[ i ][ j ] == M[ i + 1 ][ j - 1 ] + 1):
-#         pairs.append ( (i , j) )
-#         print ( Genome_1[ i ] , Genome_2[ j ] )
-#         traceback ( M , i + 1 , j - 1 , pairs )
-#     else:
-#         for k in range ( i + 1 , j ):
-#             if M[ i ][ j ] == M[ i ][ k ] + M[ k + 1 ][ j ]:
-#                 traceback ( M , k + 1 , j , pairs )
-#                 traceback ( M , i , k , pairs )
-#                 break
+def traceback(M , i , j , pairs):
+    if j <= i:
+        return
+    if M[ i ][ j ] == M[ i + 1 ][ j ]:
+        traceback ( M , i + 1 , j , pairs )
+    elif M[ i ][ j ] == M[ i ][ j - 1 ]:
+        traceback ( M , i , j - 1 , pairs )
+    elif complementary ( Genome_1[ i ] , Genome_2[ j ] ) and (M[ i ][ j ] == M[ i + 1 ][ j - 1 ] + 1):
+        pairs.append ( (i-1 , j) )
+        print ( Genome_1[ i -1] , Genome_2[ j ] )
+        traceback ( M , i + 1 , j - 1 , pairs )
+    else:
+        for k in range ( i + 1 , j ):
+            if M[ i ][ j ] == M[ i ][ k ] + M[ k + 1 ][ j ]:
+                traceback ( M , k + 1 , j , pairs )
+                traceback ( M , i , k , pairs )
+                break
 
 
-# pairs = list ( )
-# traceback ( M , 0 , max_length - 1 , pairs )
+pairs = list ( )
+traceback ( M , 0 , max_length - 1 , pairs )
 
-# print ( "pairs2" , pairs )
+print ( "pairs2" , pairs )
