@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e4128a5-8b41-4010-87fe-dc3291e4086d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/HW4_WPGMA.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW4_WPGMA.py" afterDir="false" />
-    </list>
+    <list default="true" id="4e4128a5-8b41-4010-87fe-dc3291e4086d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HW4_WPGMA.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-start-column="2" selection-end-line="101" selection-end-column="14" />
+            <state relative-caret-position="360">
+              <caret line="19" column="66" lean-forward="true" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
               <folding>
                 <marker date="1541496959088" expanded="true" signature="225:346" ph="..." />
                 <marker date="1541496959088" expanded="true" signature="362:552" ph="..." />
@@ -213,8 +211,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HW4_WPGMA.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-start-column="2" selection-end-line="101" selection-end-column="14" />
+        <state relative-caret-position="360">
+          <caret line="19" column="66" lean-forward="true" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
           <folding>
             <marker date="1541496959088" expanded="true" signature="225:346" ph="..." />
             <marker date="1541496959088" expanded="true" signature="362:552" ph="..." />
