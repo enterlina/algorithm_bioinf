@@ -67,38 +67,40 @@ def newick(M , index1 , index2 , value):
 # print ( 'res' , result )
 
 
-# def newick(M , index1 , index2 , value):
-#     global dictionary
-#     global result
-#     global Genome_1
-#     global Genome_2
-#     node_1 = Genome_1[ index1 ]
-#     node_2 = Genome_2[ index2 ]
-#     new_node = node_1 + node_2
-#     distance = value / 2
+# def insert_in_matrix_wpgma(M , index1 , index2):
+#     row = [ 0 for x in range ( 0 , len ( M ) ) ]
+#     column = [ 0 for x in range ( 0 , len ( M ) ) ]
+#     cluste1_len_1 = len(Genome_1[ index1 ] )
+#     cluste1_len_2 = len(Genome_2[ index2 ])
 #
+#
+#     for i in range ( 0 , len ( M ) ):
+#         if (i < index1) and (i < index2):
+#             column[ i ] = (M[ i ][ index1 ] + M[ i ][ index2 ]) / 2
+#             # print ( "column" , column[ i ] , 'i' , i , 'Mii1' , M[ i ][ index1 ] , "Mi2i" ,
+#             #         M[ i ][ index2 ] )
+#         elif (i > index1) and (i < index2):
+#             row[ i ] = (M[ index1 ][ i ] + M[ i ][ index2 ]) / 2
+#             # print ( "row1" , row[ i ] , 'i' , i , "  i1" , index1 , "i2" , index2 , 'Mi1i' , M[ index1 ][ i ] , "Mii2" ,
+#             #         M[ i ][ index2 ] )
+#         elif (i > index1) and (i > index2):
+#             row[ i ] = (M[ index1 ][ i ] + M[ index2 ][ i ]) / 2
+#             # print ( "row2" , row[ i ] , 'i' , i , "i1" , index1 , "i2" , index2 , 'Mi1i' , M[ index1 ][ i ] , "Mi2i" ,
+#             #         M[ index2 ][ i ] )
+#     # print ( "  \nrow" , row , "   column" , column )
+#     del row[ index2 ]
+#     del row[ index1 ]
+#     del column[ index1 ]
+#
+#     M = np.delete ( M , index1 , axis=0 )
+#     M = np.delete ( M , index2 - 1 , axis=0 )
+#     M = np.delete ( M , index1 , axis=1 )
+#     M = np.delete ( M , index2 - 1 , axis=1 )
+#
+#     M = np.insert ( M , index1 , row , axis=0 )
+#     M = np.insert ( M , index1 , column , axis=1 )
+#     return M
 
-#     if (len ( new_node ) == 2):
-#
-#         Genome_1[ index1 ] = new_node
-#         Genome_2[ index1 ] = new_node
-#         result[ index1 ] = '(' + node_1 + ':' + str ( distance ) + ', ' + node_2 + ':' + str ( distance ) + ')'
-#         dictionary[ new_node ] = distance
-#
-#     else:
-#         distance_1 = distance - dictionary[ node_1 ]
-#         distance_2 = distance - dictionary[ node_2 ]
-#         Genome_1[ index1 ] = new_node
-#         Genome_2[ index1 ] = new_node
-#
-#         result[ index1 ] = '(' + result[ index1 ] + ':' + str ( distance_1 ) + ', ' + result[
-#             index2 ] + ':' + str ( distance_2 ) + ')'
-#         dictionary[ new_node ] = distance
-#
-#     Genome_1 = Genome_1[ :index2 ] + Genome_1[ index2 + 1: ]
-#     Genome_2 = Genome_2[ :index2 ] + Genome_2[ index2 + 1: ]
-#     result = result[ :index2 ] + result[ index2 + 1: ]
-#     # print ( 'res' , result )
 
 
 def insert_in_matrix_upgma(M , index1 , index2):
@@ -145,7 +147,7 @@ def insert_in_matrix_upgma(M , index1 , index2):
 #         index1 = int ( position[ 0 ] )
 #         index2 = int ( position[ 1 ] )
 #         newick ( M , index1 , index2 , M[ index1 , index2 ] )
-#         M = insert_in_matrix ( M , index1 , index2 )
+#         M = insert_in_matrix_wpgma ( M , index1 , index2 )
 #
 #     else:
 #         return result[ 0 ]
