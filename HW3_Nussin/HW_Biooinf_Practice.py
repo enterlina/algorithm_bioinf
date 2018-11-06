@@ -1,0 +1,1 @@
+jellyfish count  -t 16 -С -m 31 -s 1000000 -o result_kmer.jf  Desktop/Project4/corrected/SRR292678sub_S1_L001_R1_001.00.0_0.cor.fastq Desktop/Project4/corrected/SRR292678sub_S1_L001_R2_001.00.0_0.cor.fastq
