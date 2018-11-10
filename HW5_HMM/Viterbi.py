@@ -62,14 +62,16 @@ calculate_Matrix ( delta , a , b , d )
 
 def traceback(delta , a , b , d):
     result_str = " "
-    for i in range ( len ( sequence ) - 1 , 1 , -1 ):
+    for i in range ( len ( sequence )-1 , 0 , -1 ):
         if max ( d[ i ][ 0 ] , d[ i ][ 1 ] ) == d[ i ][ 0 ]:
             result_str += 'T'
         elif max ( d[ i ][ 2 ] , d[ i ][ 3 ] ) == d[ i ][ 2 ]:
             result_str += 'T'
         else:
             result_str += 'F'
+
+
     return (result_str)
 
 
-print ( '\nresult' , " ".join ( traceback ( delta , a , b , d ) ) )
+print ( '\nresult' , " ".join ( traceback ( delta , a , b , d ) ), 'len', len(traceback ( delta , a , b , d )) )
