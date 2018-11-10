@@ -51,7 +51,8 @@ def calculate_Matrix(delta , a , b , d):
 
         delta[ i ][ 0 ] = max ( d[ i ][ 0 ] , d[ i ][ 1 ] )
         delta[ i ][ 1 ] = max ( d[ i ][ 2 ] , d[ i ][ 3 ] )
-
+    # print ( 'd\n' , np.matrix ( d ))
+    # print ('delta\n',np.matrix(delta))
     return (delta)
 
 
@@ -62,16 +63,20 @@ calculate_Matrix ( delta , a , b , d )
 
 def traceback(delta , a , b , d):
     result_str = " "
-    for i in range ( len ( sequence )-1 , 0 , -1 ):
-        if max ( d[ i ][ 0 ] , d[ i ][ 1 ] ) == d[ i ][ 0 ]:
-            result_str += 'T'
-        elif max ( d[ i ][ 2 ] , d[ i ][ 3 ] ) == d[ i ][ 2 ]:
-            result_str += 'T'
+    k = 2
+    for i in range ( len ( sequence ) - 1 , 0 , -1 ):
+        if max ( d[ i ][ k ] , d[ i ][ k + 1 ] ) == d[ i ][ k ]:
+            result_str = 'T' + result_str
+            # print ( ' T result_str' , result_str , 'max' , max ( d[ i ][ k ] , d[ i ][ k ] ) , 'di0' , d[ i ][ k ] ,
+            #         'i' , i , 'k' , k )
+            k = 0
         else:
-            result_str += 'F'
-
+            result_str = 'F' + result_str
+            k = 2
+            # print ( ' F result_str' , result_str , 'max' , max ( d[ i ][ k ] , d[ i ][ k ] ) , 'di0' , d[ i ][ k ] ,
+            #         'i' , i , 'k' , k )
 
     return (result_str)
 
-
-print ( '\nresult' , " ".join ( traceback ( delta , a , b , d ) ), 'len', len(traceback ( delta , a , b , d )) )
+# traceback ( delta , a , b , d )
+print ( '\nresult' , " ".join ( traceback ( delta , a , b , d ) ) , 'len' , len ( traceback ( delta , a , b , d ) ) )
