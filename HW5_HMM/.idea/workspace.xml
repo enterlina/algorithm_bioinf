@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e4128a5-8b41-4010-87fe-dc3291e4086d" name="Default Changelist" comment="" />
+    <list default="true" id="a959ebcc-70be-44e8-b75e-9d0687790886" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Viterbi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HW4_WPGMA_UPGMA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HW4_WPGMA_UPGMA/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,40 +13,50 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="1341692768">
+    <session id="-536955692">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="6" />
+          <entry key="py" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="6" />
+          <entry key="Python" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="2" />
-          <entry key="py" value="7641" />
+          <entry key="py" value="960" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="7643" />
+          <entry key="Python" value="960" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Viterbi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
+              <folding>
+                <marker date="1541881221575" expanded="true" signature="2336:2341" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -57,15 +71,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/HW4_WPGMA.py" />
-        <option value="$PROJECT_DIR$/Classes_DNA_RNA.py" />
-        <option value="$PROJECT_DIR$/NeighborJoining.py" />
+        <option value="$PROJECT_DIR$/Viterbi.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="36" />
-    <option name="y" value="79" />
+    <option name="x" value="457" />
+    <option name="y" value="31" />
     <option name="width" value="1514" />
     <option name="height" value="1019" />
   </component>
@@ -75,18 +87,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="HW4_WPGMA_UPGMA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HW4_WPGMA_UPGMA" type="462c0819:PsiDirectoryNode" />
+              <item name="HW5_HMM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HW5_HMM" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -102,8 +114,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="HW4_WPGMA" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="HW4_WPGMA_UPGMA" />
+    <configuration name="Viterbi" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HW5_HMM" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -114,7 +126,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/NeighborJoining.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Viterbi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -124,7 +136,7 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="HW4_WPGMA_UPGMA" />
+      <module name="HW5_HMM" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -135,7 +147,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HW4_WPGMA.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Viterbi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,7 +158,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.HW4_WPGMA" />
+        <item itemvalue="Python.Viterbi" />
       </list>
     </recent_temporary>
   </component>
@@ -155,31 +167,32 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4e4128a5-8b41-4010-87fe-dc3291e4086d" name="Default Changelist" comment="" />
-      <created>1541172053613</created>
+      <changelist id="a959ebcc-70be-44e8-b75e-9d0687790886" name="Default Changelist" comment="" />
+      <created>1541873329330</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1541172053613</updated>
+      <updated>1541873329330</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="36" y="79" width="1514" height="1019" extended-state="0" />
+    <frame x="457" y="31" width="1514" height="1019" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.16744809" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24983256" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" weight="0.32901832" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.42071196" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32901832" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32883435" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -189,38 +202,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/lib/python3.7/site-packages/numpy/lib/function_base.py">
+    <entry file="file://$PROJECT_DIR$/Viterbi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="4219" selection-start-line="4219" selection-end-line="4219" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes_DNA_RNA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+        <state relative-caret-position="475">
+          <caret line="72" column="21" selection-start-line="72" selection-start-column="21" selection-end-line="72" selection-end-column="21" />
           <folding>
-            <marker date="1541521628796" expanded="true" signature="14:19" ph="..." />
-            <marker date="1541521628796" expanded="true" signature="40:45" ph="..." />
-            <marker date="1541521628796" expanded="true" signature="184:564" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NeighborJoining.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HW4_WPGMA.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="24" selection-start-line="24" selection-end-line="28" />
-          <folding>
-            <marker date="1541496959088" expanded="true" signature="225:346" ph="..." />
+            <marker date="1541881221575" expanded="true" signature="2336:2341" ph="..." />
           </folding>
         </state>
       </provider>
