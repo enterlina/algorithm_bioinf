@@ -10,17 +10,17 @@ delta = [ [ 0 for col in range ( 0 , 2 ) ] for row in range ( len ( sequence ) )
 d = [ [ 0 for col in range ( 0 , 4 ) ] for row in range ( len ( sequence ) ) ]
 
 pi = [ 0.5 , 0.5 ]
-# a = np.array ( [ [ 0.8 , 0.2 ] ,
-#                  [ 0.2 , 0.8 ] ] )
-#
-# b = np.array ( [ [ 0.5 , 0.5 ] ,
-#                  [ 0.1 , 0.9 ] ] )
-
-a = np.array ( [ [ 0.5 , 0.5 ] ,
-                 [ 0.5 , 0.5 ] ] )
+a = np.array ( [ [ 0.8 , 0.2 ] ,
+                 [ 0.2 , 0.8 ] ] )
 
 b = np.array ( [ [ 0.5 , 0.5 ] ,
-                 [ 0.51 , 0.49 ] ] )
+                 [ 0.1 , 0.9 ] ] )
+
+# a = np.array ( [ [ 0.5 , 0.5 ] ,
+#                  [ 0.5 , 0.5 ] ] )
+#
+# b = np.array ( [ [ 0.5 , 0.5 ] ,
+#                  [ 0.51 , 0.49 ] ] )
 
 print ( 'a\n' , np.matrix ( a ) )
 print ( 'b\n' , np.matrix ( b ) )
@@ -63,7 +63,9 @@ calculate_Matrix ( delta , a , b , d )
 def traceback(delta , a , b , d):
     result_str = " "
     for i in range ( len ( sequence ) - 1 , 1 , -1 ):
-        if max ( delta[ i ][ 0 ] , delta[ i ][ 1 ] ) == delta[ i ][ 0 ]:
+        if max ( d[ i ][ 0 ] , d[ i ][ 1 ] ) == d[ i ][ 0 ]:
+            result_str += 'T'
+        elif max ( d[ i ][ 2 ] , d[ i ][ 3 ] ) == d[ i ][ 2 ]:
             result_str += 'T'
         else:
             result_str += 'F'
