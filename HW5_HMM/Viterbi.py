@@ -22,10 +22,8 @@ a = np.array ( [ [ 0.5 , 0.5 ] ,
 b = np.array ( [ [ 0.5 , 0.5 ] ,
                  [ 0.51 , 0.49 ] ] )
 
-print ('a\n', np.matrix(a))
-print ('b\n', np.matrix(b))
-
-
+print ( 'a\n' , np.matrix ( a ) )
+print ( 'b\n' , np.matrix ( b ) )
 
 
 # print ( '\nP' , delta , 'b01' , b[ 0 ][ 1 ] , 'b11' , b[ 1 ][ 1 ] )
@@ -41,9 +39,9 @@ def calculate_Matrix(delta , a , b , d):
     for i in range ( 1 , len ( sequence ) ):
         if sequence[ i ] == 'О':
             d[ i ][ 0 ] = delta[ i - 1 ][ 0 ] * a[ 0 ][ 0 ] * b[ 0 ][ 0 ]
-            d[ i ][ 1 ] =  delta[ i - 1 ][ 1 ] * a[ 0 ][ 1 ] * b[ 0 ][ 0 ]
-            d[ i ][ 2 ] =  delta[ i - 1 ][ 0 ] * a[ 1 ][ 0 ] * b[ 1 ][ 0 ]
-            d[ i ][ 3 ] =  delta[ i - 1 ][ 1 ] * a[ 1 ][ 1 ] * b[ 1 ][ 0 ]
+            d[ i ][ 1 ] = delta[ i - 1 ][ 1 ] * a[ 0 ][ 1 ] * b[ 0 ][ 0 ]
+            d[ i ][ 2 ] = delta[ i - 1 ][ 0 ] * a[ 1 ][ 0 ] * b[ 1 ][ 0 ]
+            d[ i ][ 3 ] = delta[ i - 1 ][ 1 ] * a[ 1 ][ 1 ] * b[ 1 ][ 0 ]
 
         else:
             d[ i ][ 0 ] = delta[ i - 1 ][ 0 ] * a[ 0 ][ 0 ] * b[ 0 ][ 1 ]
@@ -56,9 +54,11 @@ def calculate_Matrix(delta , a , b , d):
 
     return (delta)
 
+
 #
 # print ( np.matrix ( calculate_Matrix ( delta , a , b , d ) ) )
 calculate_Matrix ( delta , a , b , d )
+
 
 def traceback(delta , a , b , d):
     result_str = " "
@@ -70,4 +70,4 @@ def traceback(delta , a , b , d):
     return (result_str)
 
 
-print ( '\nresult' , " ".join(traceback ( delta , a , b , d ) ))
+print ( '\nresult' , " ".join ( traceback ( delta , a , b , d ) ) )
